@@ -75,12 +75,21 @@ class RecetaController extends Controller
         $img->save();
 
         // almacenar en la bd (sin modelo)
-        DB::table('recetas')->insert([
+        // DB::table('recetas')->insert([
+        //     'titulo' => $data['titulo'],
+        //     'preparacion' => $data['preparacion'],
+        //     'ingredientes' => $data['ingredientes'],
+        //     'imagen' => $ruta_imagen,
+        //     'user_id' => Auth::user()->id,
+        //     'categoria_id' => $data['categoria'],
+        // ]);
+
+        // Almacenar en la BD (con modelo)
+        auth()->user()->recetas()->create([
             'titulo' => $data['titulo'],
             'preparacion' => $data['preparacion'],
             'ingredientes' => $data['ingredientes'],
             'imagen' => $ruta_imagen,
-            'user_id' => Auth::user()->id,
             'categoria_id' => $data['categoria'],
         ]);
 
