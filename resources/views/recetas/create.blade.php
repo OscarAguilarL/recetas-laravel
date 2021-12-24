@@ -99,5 +99,9 @@
 
 
 @section('scripts')
-<script src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.1/trix.js" integrity="sha256-2D+ZJyeHHlEMmtuQTVtXt1gl0zRLKr51OCxyFfmFIBM=" crossorigin="anonymous" defer></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.1/trix.js"
+  integrity="sha256-2D+ZJyeHHlEMmtuQTVtXt1gl0zRLKr51OCxyFfmFIBM="
+  crossorigin="anonymous"
+  defer></script>
 @endsection
