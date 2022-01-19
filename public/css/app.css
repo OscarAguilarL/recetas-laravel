@@ -10969,6 +10969,7 @@ body {
 
 trix-editor {
   min-height: 400px;
+  height: auto !important;
 }
 
 .bg-primary .navbar-brand {
@@ -11092,5 +11093,9 @@ trix-editor {
 .hero-categorias .texto-buscar p {
   font-size: 1.4rem;
   color: #fff;
+}
+
+.icono {
+  width: 30px;
 }
 

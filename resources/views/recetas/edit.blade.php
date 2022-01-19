@@ -15,8 +15,6 @@
 
 @section('content')
 
-{{ $receta }}
-
 <h2 class="text-center mb-5">Editar Receta - <small>{{$receta->titulo}}</small></h2>
 
 

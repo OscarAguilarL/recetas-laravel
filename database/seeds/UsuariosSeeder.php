@@ -21,16 +21,11 @@ class UsuariosSeeder extends Seeder
             'url' => 'https://oscar-aguilar.com',
         ]);
 
-        $user->perfil()->create();
-
         $user2 = User::create([
             'name' => 'Pedro',
             'email' => 'pedro@mail.com',
             'password' => Hash::make('12345678'),
             'url' => 'https://oscar-aguilar.com',
         ]);
-
-        $user2->perfil()->create();
-
     }
 }

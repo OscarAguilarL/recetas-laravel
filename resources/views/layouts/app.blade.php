@@ -57,6 +57,12 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('perfiles.show', ['perfil' => Auth::user()->id]) }}">
+                                    {{ __('Ver perfil') }}
+                                </a>
+                                <a class="dropdown-item" href="{{ route('recetas.index') }}">
+                                    {{ __('Ver recetas') }}
+                                </a>
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
