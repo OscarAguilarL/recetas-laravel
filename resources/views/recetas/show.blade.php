@@ -3,21 +3,25 @@
 @section('content')
 {{-- <h1>{{$receta}}</h1> --}}
 
-<article class="contenido-receta">
+<article class="contenido-receta bg-white p-5 shadow mb-5">
     <h1 class="text-center mb-4">{{$receta->titulo}}</h1>
 
     <div class="imagen-receta">
         <img src="/storage/{{$receta->imagen}}" alt="{{$receta->titulo}}" class="w-100">
     </div>
 
-    <div class="receta-meta">
+    <div class="receta-meta mt-3">
         <p class="mt-3">
             <span class="font-weight-bold text-primary">Escrito en:</span>
-            {{$receta->categoria->nombre}}
+            <a class="text-dark" href="{{ route('categorias.show', ['categoriaReceta' => $receta->categoria->id]) }}">
+                {{$receta->categoria->nombre}}
+            </a>
         </p>
         <p>
             <span class="font-weight-bold text-primary">Autor:</span>
-            {{$receta->autor->name}}
+            <a class="text-dark" href="{{ route('perfiles.show', ['perfil' => $receta->autor->id]) }}">
+                {{$receta->autor->name}}
+            </a>
         </p>
         <p>
             <span class="font-weight-bold text-primary">Fecha:</span>
